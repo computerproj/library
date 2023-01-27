@@ -20,6 +20,6 @@ public class SearchBook {
 	
 	@GetMapping("/bookdetails")
 	public ResponseEntity<List<BookData>> searchBookDetails(@RequestParam("query") String st) {
-		return ResponseEntity.ok(ss.searchByName(st));
+		return ResponseEntity.ok(ss.searchByName(st.trim()));
 	}
 }
